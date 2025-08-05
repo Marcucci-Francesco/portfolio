@@ -5,7 +5,7 @@ import DefaultLayout from './layouts/DefaultLayout'
 import Homepage from './pages/Homepage'
 import Aboutme from './pages/Aboutme'
 import Projectpage from './pages/Projectpage'
-import Contactpage from './pages/Contactpage'
+import Contactspage from './pages/Contactspage'
 
 const App = () => {
   return (
@@ -15,7 +15,7 @@ const App = () => {
           <Route path="/" element={<Homepage />} />
           <Route path="/aboutme" element={<Aboutme />} />
           <Route path="/project" element={<Projectpage />} />
-          <Route path="/contact" element={<Contactpage />} />
+          <Route path="/contact" element={<Contactspage />} />
         </Route>
       </Routes>
     </BrowserRouter>

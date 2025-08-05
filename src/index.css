@@ -3,3 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.nav:hover {
+  cursor: pointer;
+  transform: scale(1.4);
+  transition: transform 0.2s ease-in-out;
+  color: rgb(255, 208, 0) !important;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+}
