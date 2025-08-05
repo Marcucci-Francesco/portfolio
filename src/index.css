@@ -4,12 +4,35 @@
   box-sizing: border-box;
 }
 
-.nav:hover {
-  cursor: pointer;
-  transform: scale(1.4);
-  transition: transform 0.2s ease-in-out;
-  color: rgb(255, 208, 0) !important;
+.nav-link-hover {
+  position: relative;
+  display: inline-block;
 }
+
+.nav-link-hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link-hover:hover::after {
+  width: 100%;
+}
+
+.logo-hover {
+  display: inline-block;
+  transition: transform 0.4s ease-in-out;
+}
+
+.logo-hover:hover {
+  transform: rotate(20deg);
+}
+
 
 .glass-effect {
   background: rgba(255, 255, 255, 0.1);
