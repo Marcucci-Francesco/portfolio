@@ -12,14 +12,23 @@ const Homepage = () => {
       <div
         className="bg-white position-absolute shadow rounded"
         style={{
-          width: '1100px',
+          width: '1250px',
           height: '350px',
           top: '50%',
           left: 'calc(33.33% - 250px)',
-          transform: 'translateY(-50%)',
+          transform: 'translate(-7%, -30%)',
           zIndex: 10
         }}
       >
+        <img src="me.png" alt="me" className="position-absolute"
+          style={{
+            width: '750px',
+            height: '550px',
+            top: '50%',
+            left: 'calc(33.33% - 250px)',
+            transform: 'translate(-24%, -68%)',
+            zIndex: 10
+          }} />
       </div>
     </main>
   )
