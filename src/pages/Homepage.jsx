@@ -9,14 +9,24 @@ const Homepage = () => {
         <div className="bg-dark" style={{ width: '66.66%', height: '100%' }}></div>
       </div>
 
+      <h1 className='position-absolute monoton-regular fs-1'
+        style={{
+          scale: '2',
+          top: '24%',
+          left: '10%',
+          zIndex: 11
+        }}>
+        PORT
+      </h1>
+
       <div
         className="bg-white position-absolute shadow rounded"
         style={{
           width: '1250px',
-          height: '350px',
+          height: '352px',
           top: '50%',
           left: 'calc(33.33% - 250px)',
-          transform: 'translate(-7%, -30%)',
+          transform: 'translate(-7%, -40%)',
           zIndex: 10
         }}
       >
@@ -30,10 +40,21 @@ const Homepage = () => {
             zIndex: 10
           }} />
       </div>
+
+      <h1 className='position-absolute monoton-regular fs-1 text-white'
+        style={{
+          scale: '2',
+          top: '80%',
+          left: '48%',
+          zIndex: 11
+        }}>
+        FOLIO
+      </h1>
     </main>
   )
 }
 
 export default Homepage
+
 
 
