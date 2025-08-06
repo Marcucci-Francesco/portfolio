@@ -12,6 +12,19 @@
   font-style: normal;
 }
 
+.archivo-black-regular {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #b4b4b4, #252525);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
 
 .nav-link-hover {
   position: relative;

@@ -39,6 +39,18 @@ const Homepage = () => {
             transform: 'translate(-24%, -68%)',
             zIndex: 10
           }} />
+
+        <h1 className='position-absolute fs-1 text-center archivo-black-regular gradient-text'
+          style={{
+            width: '270px',
+            scale: '2',
+            top: '30%',
+            left: '65%',
+            zIndex: 11
+          }}
+        >
+          WEB <br /> DEVELOPER
+        </h1>
       </div>
 
       <h1 className='position-absolute monoton-regular fs-1 text-white'
