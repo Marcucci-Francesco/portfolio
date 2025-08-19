@@ -1,17 +1,41 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { motion, AnimatePresence } from 'framer-motion'
+import { Link, useLocation } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCode } from '@fortawesome/free-solid-svg-icons'
 
 const Header = () => {
+  const location = useLocation()
+  const isHome = location.pathname === "/"
+
   return (
     <header>
       <nav className="navbar navbar-expand-lg glass-effect position-fixed top-0 start-0 w-100" style={{ height: '60px', zIndex: 1000 }}>
         <div className="container-fluid">
-          <Link className="navbar-brand fw-bold text-dark d-flex align-items-center gap-2" to="/">
-            <FontAwesomeIcon icon={faCode} size="lg" className='logo-hover' />
-            Francesco Marcucci
-          </Link>
+
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={location.pathname}
+              initial={{ opacity: 0, y: -4 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -4 }}
+              transition={{ duration: 0.22, ease: "easeOut" }}
+            >
+              <Link
+                className={`navbar-brand fw-bold d-flex align-items-center gap-2 ${isHome ? "text-dark" : "text-white"}`}
+                to="/"
+              >
+                <FontAwesomeIcon
+                  icon={faCode}
+                  size="lg"
+                  className={`logo-hover ${isHome ? "text-dark" : "text-white"}`}
+                />
+                Francesco Marcucci
+              </Link>
+            </motion.div>
+          </AnimatePresence>
+
+
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span className="navbar-toggler-icon"></span>
           </button>
