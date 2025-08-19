@@ -63,3 +63,31 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 15px;
 }
+
+/* ABOUTME */
+
+:root {
+  --header-h: 60px;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+.main-under-header {
+  min-height: calc(100vh - var(--header-h));
+  padding-top: calc(var(--header-h) + 16px);
+}
+
+.aboutme-img {
+  height: clamp(360px, 65vh, 700px);
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
