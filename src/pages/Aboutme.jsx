@@ -21,10 +21,12 @@ const Aboutme = () => {
   }
 
   const lines = [
-    "Qui puoi inserire la tua descrizione o un testo di presentazione più lungo.",
-    "Puoi raccontare esperienze, interessi e ciò che ti appassiona nel lavoro.",
-    "L’immagine e il testo sono allineati considerando l’header fisso."
+    "💻 Chi sono\nSono Francesco Marcucci, Junior Front-End Developer con una forte passione per il mondo digitale. La mia strada verso il web non è stata immediata: ho iniziato come geometra, affinando precisione e attenzione al dettaglio, e ho lavorato come consulente di vendita, imparando quanto sia importante ascoltare e comprendere davvero i bisogni delle persone.",
+    "\n\n🎨 Il cambiamento\nA un certo punto ho sentito il bisogno di esprimere la mia creatività in modo nuovo. Così ho deciso di mettermi in gioco intraprendendo un percorso di formazione come Web Developer. È stata una scelta di rivalsa e di crescita personale: finalmente potevo unire logica, estetica e tecnologia per dare forma ad esperienze digitali concrete.",
+    "\n\n🚀 Cosa mi motiva\nOggi il mio obiettivo è trasformare idee in interfacce intuitive e accessibili. Ogni progetto è per me una sfida e un’opportunità: non solo per scrivere codice chiaro e funzionale, ma per creare esperienze digitali che le persone possano vivere con semplicità e piacere.",
+    "\n\n🌟 La mia visione\nCredo che il web sia uno spazio in cui creatività e funzionalità si incontrano, e in cui il mio percorso, fatto di esperienze diverse ma complementari, trova finalmente la sua piena espressione."
   ]
+
 
   return (
     <main className="bg-dark main-under-header" style={{ height: '100vh' }}>
@@ -55,10 +57,10 @@ const Aboutme = () => {
             variants={fadeUpCol}
           >
             <motion.h1 className="text-danger mb-4 display-4" variants={titleIn}>
-              Qualcosa su di me
+              La mia storia
             </motion.h1>
 
-            <motion.div variants={linesContainer} initial="hidden" animate="show" className="fs-5">
+            <motion.div variants={linesContainer} initial="hidden" animate="show" className="fs-8">
               {lines.map((t, i) => (
                 <motion.p key={i} variants={line} className="mb-2">{t}</motion.p>
               ))}
